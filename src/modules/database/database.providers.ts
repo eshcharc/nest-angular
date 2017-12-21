@@ -1,5 +1,5 @@
 import { createConnection, ConnectionOptions } from 'typeorm';
-const config = require('../../../../ormconfig.js');
+const config = require('../../../ormconfig.js');
 
 export const databaseProviders = [
   {

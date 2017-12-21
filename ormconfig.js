@@ -6,7 +6,7 @@ module.exports = {
     "password": "zxasqw12",
     "database": "test",
     "entities": [
-        __dirname + "/src/app/modules/**/*.model{.ts,.js}"
+        __dirname + "/src/modules/**/*.model{.ts,.js}"
     ],
     "migrations": ["migration/*{.js,.ts}"],
     "cli": {

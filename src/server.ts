@@ -5,7 +5,7 @@ const { AppServerModuleNgFactory, LAZY_MODULE_MAP } = require('../dist/server/ma
 import { ngExpressEngine } from '@nguniversal/express-engine';
 const { provideModuleMap } = require('@nguniversal/module-map-ngfactory-loader');
 
-import { ApplicationModule } from './app/modules/app/app.module';
+import { ApplicationModule } from './modules/app/app.module';
 import { AppServerModule } from '../client/src/main.server';
 
 import { NestFactory } from '@nestjs/core';
@@ -59,11 +59,7 @@ async function bootstrap() {
   SwaggerModule.setup('/api', app, document);
 
 
-  await app.listen(PORT);
   // // Start up the Node server
-  // server.listen(PORT, () => {
-  //   console.log(`Node Express server listening on http://localhost:${PORT}`);
-  // });
-
+  await app.listen(PORT);
 }
 bootstrap();
